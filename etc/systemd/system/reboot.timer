@@ -1,0 +1,10 @@
+[Unit]
+Description=Reboots system on schedule
+
+[Timer]
+OnCalendar=Sat
+Persisten=true
+
+[Install]
+WantedBy=timers.target
+

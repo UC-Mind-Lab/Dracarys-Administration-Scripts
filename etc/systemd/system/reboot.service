@@ -1,0 +1,8 @@
+[Unit]
+Description=Reboot system
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/schedule_reboot.sh "next Sunday"
+Environment="HOME=/root"
+
