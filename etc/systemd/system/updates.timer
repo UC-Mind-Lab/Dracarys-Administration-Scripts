@@ -1,0 +1,10 @@
+[Unit]
+Description=Updates system on schedule
+
+[Timer]
+OnCalendar=daily
+Persisten=true
+
+[Install]
+WantedBy=timers.target
+

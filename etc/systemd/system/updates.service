@@ -1,0 +1,8 @@
+[Unit]
+Description=Update system
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/upgrade_system.sh
+Environment="HOME=/root"
+
