@@ -49,3 +49,6 @@ echo "echo 'Change your password with \"passwd\"'" | sudo -u $username tee -a $u
 
 # Inform them about how to delete these messages
 echo "echo 'Delete this message by editing your ~/.bashrc'" | sudo -u $username tee -a $userhome/.bashrc
+
+# Restrict access to home directory to only the user
+sudo chmod -R o-rwx $userhome
