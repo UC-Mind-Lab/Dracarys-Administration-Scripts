@@ -43,4 +43,9 @@ sudo -u $username cp $userhome/.tmux/.tmux.conf.local $userhome
 echo "echo 'The terminal is better with tmux'" | sudo -u $username tee -a $userhome/.bashrc
 echo "echo 'Try it with \"tmux\". Learn it with \"man tmux\" or web searching'" | sudo -u $username tee -a $userhome/.bashrc
 echo "echo 'Fancy configs done with \"Oh My Tmux!\"'" | sudo -u $username tee -a $userhome/.bashrc
+
+# Inform them about changing their password
+echo "echo 'Change your password with \"passwd\"'" | sudo -u $username tee -a $userhome/.bashrc
+
+# Inform them about how to delete these messages
 echo "echo 'Delete this message by editing your ~/.bashrc'" | sudo -u $username tee -a $userhome/.bashrc
