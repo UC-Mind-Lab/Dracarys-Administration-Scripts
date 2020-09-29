@@ -30,9 +30,17 @@ sudo -u $username ln -s /home/MindLabMember/Android/Sdk $userhome/Android/
 # Set up Xilinx
 sudo -u $username mkdir -p $userhome/.Xilinx
 sudo -u $username ln -s /opt/xilinx/Xilinx.lic $userhome/.Xilinx/
-# Set ssh folder
+# Setup ssh folder
 sudo -u $username mkdir -p $userhome/.ssh
 sudo -u $username touch $userhome/.ssh/authorized_keys
 sudo -u $username touch $userhome/.ssh/config
 sudo chmod -R g-rwx,o-rwx $userhome/.ssh
 
+# Setup tmux
+sudo -u $username git clone https://github.com/gpakosz/.tmux.git $userhome/.tmux
+sudo -u $username ln -s -f $userhome/.tmux/.tmux.conf $userhome
+sudo -u $username cp $userhome/.tmux/.tmux.conf.local $userhome
+echo "echo 'The terminal is better with tmux'" | sudo -u $username tee -a $userhome/.bashrc
+echo "echo 'Try it with \"tmux\". Learn it with \"man tmux\" or web searching'" | sudo -u $username tee -a $userhome/.bashrc
+echo "echo 'Fancy configs done with \"Oh My Tmux!\"'" | sudo -u $username tee -a $userhome/.bashrc
+echo "echo 'Delete this message by editing your ~/.bashrc'" | sudo -u $username tee -a $userhome/.bashrc
