@@ -3,7 +3,7 @@ Description=Updates system on schedule
 
 [Timer]
 OnCalendar=daily
-Persisten=true
+Persistent=true
 
 [Install]
 WantedBy=timers.target
