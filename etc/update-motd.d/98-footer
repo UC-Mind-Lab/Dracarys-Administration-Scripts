@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/games/cowsay "$(cat $(find  /etc/update-motd.d/quotes -type f | shuf -n 1))"

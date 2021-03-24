@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Taken from the comments of:
+# https://unix.stackexchange.com/a/229759
+
+USECS=$(busctl get-property org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager ScheduledShutdown | cut -d ' ' -f 3);
+SECS=$((USECS / 1000000));
+
+if [ $SECS -eq 0 ]; then
+  printf "No reboot is scheduled\n"
+else
+  printf "Reboot is scheduled at %s\n" "$(date --date=@$SECS)"
+fi
+
+# Remind users of ability to postpone/schedule reboot in 24 hours
+printf 'Members of "MindLabMember" can postpone reboot 24 hours with "sudo shutdown -r 1440"\n'
