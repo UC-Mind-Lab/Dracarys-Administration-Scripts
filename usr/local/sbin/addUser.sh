@@ -13,8 +13,6 @@ fi
 
 # Create the user
 sudo adduser $username
-# Expire and lock their password
-sudo passwd -e -l $username
 
 # Groups they should be added to
 sudo adduser $username MindLabMember # For access to the public folder
