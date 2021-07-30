@@ -2,9 +2,8 @@
 .PHONY: all install install-scripts install-ssh install-systemd install-updated-motd
 
 ### Macros ###
-# For testing set PREFIX in shell environment, like
-# $ PREFIX=/tmp/test make
-DEST = $(PREFIX)
+# For testing set DEST to another value
+DEST = /
 
 ### Targets ###
 all: install
