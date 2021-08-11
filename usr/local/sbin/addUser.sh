@@ -29,7 +29,7 @@ sudo -u $username mkdir -p $userhome/Android
 sudo -u $username ln -s /home/MindLabMember/Android/Sdk $userhome/Android/
 # Set up Xilinx
 sudo -u $username mkdir -p $userhome/.Xilinx
-sudo -u $username ln -s /opt/xilinx/Xilinx.lic $userhome/.Xilinx/
+sudo -u $username ln -s /tool/xilinx/Xilinx.lic $userhome/.Xilinx/
 # Setup ssh folder
 sudo -u $username mkdir -p $userhome/.ssh
 sudo -u $username touch $userhome/.ssh/authorized_keys
